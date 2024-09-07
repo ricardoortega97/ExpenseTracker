@@ -12,6 +12,9 @@
 		519152542C8CE2670063E911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519152532C8CE2670063E911 /* Assets.xcassets */; };
 		519152572C8CE2670063E911 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519152562C8CE2670063E911 /* Preview Assets.xcassets */; };
 		519152632C8CE3B10063E911 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519152622C8CE3B10063E911 /* Extensions.swift */; };
+		519152692C8CF9660063E911 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519152682C8CF9660063E911 /* TransactionModel.swift */; };
+		5191526B2C8CFAB50063E911 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191526A2C8CFAB50063E911 /* PreviewData.swift */; };
+		5191526D2C8CFB760063E911 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5191526C2C8CFB760063E911 /* TransactionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		519152532C8CE2670063E911 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		519152562C8CE2670063E911 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		519152622C8CE3B10063E911 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		519152682C8CF9660063E911 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		5191526A2C8CFAB50063E911 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		5191526C2C8CFB760063E911 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,10 @@
 		5191524E2C8CE2660063E911 /* ExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
-				519152652C8CEA4F0063E911 /* Helpers */,
 				519152642C8CE9C80063E911 /* Views */,
+				519152672C8CF93E0063E911 /* Models */,
+				519152662C8CF9270063E911 /* ViewModels */,
+				519152652C8CEA4F0063E911 /* Helpers */,
 				5191524F2C8CE2660063E911 /* ExpenseTrackerApp.swift */,
 				519152532C8CE2670063E911 /* Assets.xcassets */,
 				519152552C8CE2670063E911 /* Preview Content */,
@@ -66,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				519152562C8CE2670063E911 /* Preview Assets.xcassets */,
+				5191526A2C8CFAB50063E911 /* PreviewData.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -74,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				519152512C8CE2660063E911 /* ContentView.swift */,
+				5191526C2C8CFB760063E911 /* TransactionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -84,6 +94,21 @@
 				519152622C8CE3B10063E911 /* Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		519152662C8CF9270063E911 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		519152672C8CF93E0063E911 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				519152682C8CF9660063E911 /* TransactionModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5191526B2C8CFAB50063E911 /* PreviewData.swift in Sources */,
+				519152692C8CF9660063E911 /* TransactionModel.swift in Sources */,
 				519152632C8CE3B10063E911 /* Extensions.swift in Sources */,
+				5191526D2C8CFB760063E911 /* TransactionRow.swift in Sources */,
 				519152522C8CE2660063E911 /* ContentView.swift in Sources */,
 				519152502C8CE2660063E911 /* ExpenseTrackerApp.swift in Sources */,
 			);
