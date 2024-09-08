@@ -18,6 +18,9 @@ struct ContentView: View {
                     Text("Overview")
                         .font(.title2)
                         .bold()
+                    
+                    // MARK: Transaction List
+                    RecentTransactionLst()
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
@@ -37,7 +40,17 @@ struct ContentView: View {
     
 }
 struct ContentView_Previews: PreviewProvider {
+    
+    static let transactionsLstVM: TransactionLstViewModel = {
+        //call the instance
+        let transactionLstVM = TransactionLstViewModel()
+        //push the data to the property
+        transactionLstVM.transactions = transactionsListPreviewData
+        return transactionLstVM
+    }()
     static var previews: some View {
         ContentView()
+        //call the instance of the Transaction list Model
+            .environmentObject(transactionsLstVM)
     }
 }
