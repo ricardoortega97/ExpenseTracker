@@ -7,6 +7,9 @@
 
 import Foundation
 import Combine
+
+typealias TransactionGroup = [String: [Transaction]]
+
 //combine framework that turns any object into a publisher and notify its user of the state changes
 final class TransactionLstViewModel: ObservableObject {
     //warpper class
@@ -49,5 +52,15 @@ final class TransactionLstViewModel: ObservableObject {
                 //dump(self?.transactions)
             }
             .store(in: &cancellables)
+    }
+
+    func groupTransactionByMonth() -> TransactionGroup {
+      //ensure the array is not empty
+        guard !transactions.isEmpty else {return [:] } //returns the dictonary
+        
+        //Constant group call
+        let groupTransactions = TransactionGroup(grouping: transactions) { $0.month }
+        
+        return groupTransactions
     }
 }
