@@ -7,8 +7,9 @@
 
 import Foundation
 import Combine
+import Collections
 
-typealias TransactionGroup = [String: [Transaction]]
+typealias TransactionGroup = OrderedDictionary<String, [Transaction]>
 
 //combine framework that turns any object into a publisher and notify its user of the state changes
 final class TransactionLstViewModel: ObservableObject {
